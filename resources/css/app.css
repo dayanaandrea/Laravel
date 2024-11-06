@@ -1,7 +1,11 @@
 *{
   font-family: 'Courier New', Courier, monospace;  
+  font-size: medium;
 }
 
 #mis-estilos h1{
     color: red;
+    font-style: bold;
+    text-align: center;
+
 }
