@@ -8,7 +8,8 @@ Route::get('/', function () {
     return view('home');
 });
 
-Route::controller(PostController::class)->group(function () {
+
+/*Route::controller(PostController::class)->group(function () {
     Route::get('/posts', 'index')->name('posts.index');
     Route::get('/posts/{post}', 'show')->name('posts.show');
     Route::get('/posts/create', 'create')->name('posts.create');
@@ -16,7 +17,12 @@ Route::controller(PostController::class)->group(function () {
     Route::post('/posts/store', 'store')->name('posts.store');
 
     Route::delete('/posts/destroy', 'destroy')->name('posts.destroy');
-});
+});*/
+
+//En vez de poner el codigo anterior si se pone de esta forma es mas eficaz 
+Route::resources([
+    'posts' => PostController::class,
+]);
 
 Auth::routes();
 
