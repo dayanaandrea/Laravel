@@ -5,8 +5,9 @@
   {{-- visualizamos los atributos del objeto --}}
  
   <div class="card" id="IndexCard">
-      <a href="{{route('posts.show',$post)}}"> {{$post->titulo}}</a>.
+      <a  href="{{route('posts.show',$post)}}"><b> {{$post->titulo}}</b></a>.
       Escrito el {{$post->created_at}}
+      @auth
       <a class="btn btn-warning btn-sm" href="{{route('posts.edit',$post)}}"
         role="button" id="cardButton">Editar</a>
 
@@ -17,6 +18,7 @@
           onclick="return confirm('Are you sure?')">Delete
         </button>
       </form>
+      @endauth
     </div>
 @endforeach
 </div>

@@ -5,20 +5,20 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card" id="card">
-                <div class="card-header">{{ __('Create') }}</div>
+                <div class="card-header">Create</div>
 
                 <div class="card-body"> 
-                <label>{{ __('Crea un nuevo post ') }}</label> </br>
-                <button id="boton"><a class="nav-link" href="{{ route('login') }}">{{ __('Crear') }}</a></button>
+                <label>Crea un nuevo post </label> </br>
+                <button id="boton"><a class="nav-link" href="{{ route('posts.create') }}">Crear</a></button>
                 </div>
             </div>
-
+            <br>
             <div class="card" id="card">
-                <div class="card-header">{{ __('Edit') }}</div>
+                <div class="card-header">Ver</div>
 
                 <div class="card-body">
-                <label>{{ __('Edita uno de nuestros posts ') }}</label> </br>
-                    <button id="boton"><a class="nav-link" href="{{ route('login') }}">{{ __('Editar') }}</a></button>
+                <label>Ver nuestros posts</label> </br>
+                <button id="boton"><a class="nav-link" href="{{ route('posts.index') }}">Ver</a></button>
                 </div>
             </div>
         </div>
