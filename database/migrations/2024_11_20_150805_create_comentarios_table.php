@@ -14,7 +14,11 @@ return new class extends Migration
             $table->id();
             $table->string('texto');
             $table->unsignedBigInteger('post_id');
-            $table->foreign('post_id')->references('id')->on('posts');
+            $table->foreign('post_id')
+                    ->references('id')
+                    ->on('posts')
+                    ->onUpdate('cascade')
+                    ->onDelete('cascade');
             $table->timestamps();
         });
     }
