@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostController;
-
+use App\Http\Controllers\ComentarioController;
 
 Route::get('/', function () {
     return view('home');
@@ -23,8 +23,6 @@ Route::get('/', function () {
 Route::resources([
     'posts' => PostController::class,
 ]);
-
-
 
 Auth::routes();
 
