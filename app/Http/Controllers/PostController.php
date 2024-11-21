@@ -10,10 +10,14 @@ class PostController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request)
     {
         $posts = Post::orderBy('created_at')->get();
-        return view('posts.index',['posts' => $posts]);
+        if ($request->expectsJson()) {
+            return response()->json($posts);
+        } else {
+            return view('posts.index',['posts' => $posts]);
+        }
     }
 
     /**
